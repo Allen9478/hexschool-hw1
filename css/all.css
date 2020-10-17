@@ -51,7 +51,7 @@ table {
 
  .wrap{
      width: 1000px;
-    margin: 20px auto;
+    margin: 0px auto;
  }
  /* header start */
  .header{
@@ -59,10 +59,7 @@ table {
  }
  .up-header{
     width: 100%;
-    float:right;
-    /* margin-right: 10px; */
     background-color: #f6f6f6;
-    /* height: 10px; */
  }
  .up-header ul{
      float: right;
@@ -120,7 +117,7 @@ table {
     color: #00cc99 ;
     font-weight: bold;
     line-height: 30px;
-    
+    display: block;
  }
  /* header end */
  /* box start */
