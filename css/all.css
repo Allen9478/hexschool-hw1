@@ -60,12 +60,11 @@ table {
  .up-header{
     width: 100%;
     background-color: #f6f6f6;
+    display: flex;
+    justify-content: flex-end;
  }
- .up-header ul{
-     float: right;
- }
- .up-header ul li{
-     float: left;
+ .up-header  li{
+     /* float: left; */
      margin: 5px;
  }
  .facebook{
@@ -82,7 +81,7 @@ table {
      clear: both;
  }
  .down-header{
-    height: 45px;
+    /* height: 45px; */
     display: flex;
     justify-content: space-between;
  }
@@ -92,7 +91,7 @@ table {
  .down-header h1 a{
     width: 170px;
     height: 35px;
-    margin-top: 5px;
+    margin-top: 9px;
       text-indent: 250%;
       white-space: nowrap;
       overflow: hidden;
@@ -104,40 +103,114 @@ table {
  .down-header .menu{
     display: flex;
     }
- .down-header .menu li{
+ .down-header .menu > li{
     margin-left: 15px;
     margin-right: 15px;
-    padding: 10px;
+    padding: 10px 20px;
+    position: relative;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
  }
- .down-header .menu li:hover{
-     border-bottom: 4px solid #00cc99;
-     
- }
- .down-header .menu li a{
+ 
+ .down-header .menu  li  a{
     color: #00cc99 ;
     font-weight: bold;
     line-height: 30px;
     display: block;
  }
+ .down-header .menu > li.active{
+    border-bottom: 4px solid #00cc99;
+}
+ .menu-open{
+     display: none;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    padding: 10px 0px;
+    left: 0;
+    top: 53px;
+    z-index: 99;
+    margin: 0;
+ }
+ .menu-open li{
+     display: flex;
+    border-bottom: 3px solid #FFF;
+ }
+ .menu .menu-open  li  a {
+    display: flex;
+    color: #FFF;
+    opacity: .7;
+    justify-content: space-between;
+    margin-left: 10px;
+    padding: 5px;
+    font-weight: bold;
+    line-height: 30px;
+ }
+ .menu .menu-open  li.menu-green  a {
+    display: flex;
+    color: #00cc99 ;
+    opacity: .85;
+    justify-content: space-between;
+    margin-left: 10px;
+    padding: 5px;
+    font-weight: bold;
+    line-height: 30px;
+ }
+ .menu-open li a i{
+    font-weight: bold;
+    line-height: 30px;
+    position: absolute;
+    right: 15px;
+ }
+ .menu  .menu-open   li   a:hover{
+     opacity: 1;
+ }
+ .menu  .menu-open   li   a.menu-green:hover{
+    opacity: 1;
+}
+ .down-header .menu > li:hover .menu-open{
+    
+    display: block;
+}
+.menu-open-second{
+    display: none;
+    width: 250px;
+    background-color: black;
+    position: absolute;
+    left: 114px;
+    
+    /* z-index: 99; */
+}
+.menu-open .menu-open-second  li  a{
+    color: #00cc99 ;
+    font-weight: bold;
+    line-height: 30px;
+    padding: 5px;
+}
+
+.close{
+    display: none;
+    clear: both;
+}
  /* header end */
  /* box start */
 .box{
-    background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png
+    /* background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png
     ) no-repeat ;
-    background-size: 100%;
-    height: 347px;
+    background-size: 100%; */
+    /* height: 347px; */
+    position: relative;
 }
-.shadow{
+.box h2{
     position: absolute;
-    width: 960px;
+    width: 100%;
     margin-top: 100px;
-    padding: 20px;
+    padding: 20px 50px;
     background-color: rgba(0, 0, 0, 30%);
     color:#fff;
     font-size: 30px;
-}
-.box p{
-    margin: 0 5px;
+    top: 10%;
+    box-sizing: border-box;
 }
 /* box end */
 
@@ -197,22 +270,22 @@ table {
     width: 100%;
     margin-bottom: 50px;
 }
-table{
+.home-table{
     width: 840px;
     margin: 0 auto;
 }
-table tr{
+.home-table tr{
     border-top: 2px solid #f7f7f7;
     border-bottom: 2px solid #f7f7f7;
 }
-table tr th{
+.home-table tr th{
     text-align: left;
     font-weight: bold;
     padding: 10px 0;
     padding-left: 10px;
     background-color: #f7f7f7;
 }
-table tr td{
+.home-table tr td{
     padding: 10px 0;
     padding-left: 10px;
 }
@@ -236,10 +309,6 @@ table tr td{
 .form-box{
     display: flex;
     justify-content: space-between;
-}
-.area{
-    width: 462px;
-    height: 247px;
 }
 .form-box2{
     margin-top: 10px;
@@ -299,3 +368,28 @@ table tr td{
     margin-left: 5px;
 }
 /* footer end */
+/* swiper start */
+.swiper-container{
+    width: 1000px;
+}
+.swiper-container img{
+  width: 100%;
+}
+/* swiper end */
+/* TOP button */
+.backtoTOP{
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: gray;
+    color: #f6f6f6;
+    position: fixed;
+    bottom: 5%;
+    display: block;
+    right: 3%;
+    transition: .5s;
+}
+.backtoTOP:hover{
+    background-color: rgb(95, 41, 41);
+    color: rgb(211, 208, 12);
+}
